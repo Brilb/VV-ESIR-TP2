@@ -23,3 +23,28 @@ Use your rule with different projects and describe you findings below. See the [
 
 ## Answer
 
+<rule name="IfEmbedding"
+      language="java"
+      message="If Statement Embedding"
+      class="net.sourceforge.pmd.lang.rule.XPathRule">
+   <description>
+You shouldn&apos;t have more than 2 If Statement Embedding
+   </description>
+   <priority>3</priority>
+   <properties>
+      <property name="version" value="2.0"/>
+      <property name="xpath">
+         <value>
+<![CDATA[
+//Block//IfStatement//IfStatement//IfStatement
+]]>
+         </value>
+      </property>
+   </properties>
+</rule>
+
+After injecting this in my rules set and execute:
+pmd.bat -d .\commons-collections\ -R D:\Documents\ESIR2\VV\TP2\myRule.xml/IfEmbedding
+
+I could see lot of IfStatement embedding in the collection of Apache.
+You can see the result in a .html in the package 'Exercice 3'.
