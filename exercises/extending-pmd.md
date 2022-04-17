@@ -23,6 +23,7 @@ Use your rule with different projects and describe you findings below. See the [
 
 ## Answer
 
+/*
 <rule name="IfEmbedding"
       language="java"
       message="If Statement Embedding"
@@ -42,6 +43,7 @@ You shouldn&apos;t have more than 2 If Statement Embedding
       </property>
    </properties>
 </rule>
+*/
 
 After injecting this in my rules set and execute:
 pmd.bat -d .\commons-collections\ -R D:\Documents\ESIR2\VV\TP2\myRule.xml/IfEmbedding
